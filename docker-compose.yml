@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+ backend:
+  build: ./flask_backend/
+  image: app_backend
+  container_name: "backend"
+  restart: always
+  ports:
+   - 5000:5000
+ frontend:
+  build: .
+  image: casestudy
+  container_name: "frontend"
+  ports:
+   - 8081:8081

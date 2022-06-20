@@ -1,0 +1,68 @@
+
+<table class="wp-table" width="100%">
+    <tr>
+      
+    <th > AllianzActive4Life </th>
+    <th > Scenario  </th>
+    <th > Market Stress  </th>
+    </tr>
+    <tr>
+    <td>
+    <select required class="mdb-select md-form colorful-select dropdown-primary" data-val="true"
+        id="Portfolio"  [(ngModel)]="Portfolio">
+      <option value="Defensive">Defensive</option>
+      <option value="Moderate">Moderate</option>
+      <option value="Mediocre">Aggresive</option>
+    </select>
+  </td>
+
+  <td>
+
+<select required class="mdb-select md-form colorful-select dropdown-primary" data-val="true"
+    id="Sce"  [(ngModel)]="Sce">
+  <option value="Bad">Bad</option>
+  <option value="Mediocre">Mediocre</option>
+  <option value="Good">Good</option>
+</select>
+</td>
+
+<td>
+
+<select required class="mdb-select md-form colorful-select dropdown-primary" data-val="true"
+    id="Bool"  [(ngModel)]="Bool">
+  <option value="No">No</option>
+  <option value="Yes">Yes</option>
+</select>
+
+</td>
+
+</tr>
+<tr>
+  <th > Initial Investment</th>
+  <th > Investment Horizon   </th>
+  <th > Expected Outcome </th>
+  </tr>
+<tr>
+<td>
+<input style="width:80%;" id="Investment" [(ngModel)]="Investment" type="number" step="100" min="0" max="" name="quantity" value="10" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+</td>
+<td>
+<input style="width:80%;"  id="Year"  [(ngModel)]="Year" type="number" step="1" min="1" max="" name="w" value="10" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+</td>
+<td>
+  <p style="width:80%;" id ="expected"> {{expected}}</p>
+  </td>
+</tr>
+</table>
+
+<div>
+  <button  (click)="getPlot()">Get Plot</button>
+
+</div>
+  <div class="chart-wrapper"> 
+<canvas id ="chart"  >
+  {{chart2}}
+</canvas>
+</div>
+
+
